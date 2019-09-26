@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+  <ion-card>
+
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input type="text" name="titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Categoria</ion-label>
+      <ion-select>
+        <ion-select-option value="" selected>Nenhum</ion-select-option>
+        <ion-select-option value="nes">Comercial</ion-select-option>
+        <ion-select-option value="n64">Natureza</ion-select-option>
+        <ion-select-option value="ps">Infraestrutura</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Data</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" name="datapost"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-textarea rows="4" maxLength="500" type="text"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Mapa</ion-label>
+      <div id=""> </div>
+    </ion-item>
+
+    
+
+    <!-- <div padding>
+      <button ion-button block (click)="abrirGaleria()" icon-only>
+        <ion-icon name="book"></ion-icon>Abrir Galeria
+      </button>
+    </div> -->
+
+    <!-- <button ion-button full (click)="saveConteudo(conteudo)">OK</button> -->
+
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="foto_serv.takePic()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-button expand="block" (click)="save()">Salvar</ion-button>
+
+  <div #mapElement id="map" class="map"></div>
+</ion-content>

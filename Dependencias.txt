@@ -1,0 +1,8 @@
+ionic cordova platform add ios 
+npm i -g cordova-res
+ionic cordova resources ios --force
+ionic cordova platform add android
+npm install @ionic-native/camera
+ionic cordova plugin add cordova-plugin-camera
+ionic cordova plugin add cordova-sqlite-storage
+npm install --save @ionic/storage

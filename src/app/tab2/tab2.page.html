@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+  <ion-searchbar animated placeholder="Procurar" showCancelButton="focus"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>
+        <img src="https://definicao.net/wp-content/uploads/2019/05/semaforo-2-810x542.jpg" />
+      </ion-label>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Card Subtitle 2</ion-card-subtitle>
+        <ion-card-title>Card Title 2</ion-card-title>
+      </ion-card-header>
+      <ion-item>
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label>
+          <img src="https://i.ytimg.com/vi/ErBOlFT141k/hqdefault.jpg" />
+        </ion-label>
+        <ion-button fill="outline" slot="end">View</ion-button>
+      </ion-item>
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      </ion-card-content>
+    </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <!-- Since an ion-row consists of 12 “blocks” of space, and we’re setting the size to 6 (size="6"), only 2 photos are displayed per row. -->
+      <ion-col size="4" *ngFor="let foto of foto_serv.fotos">
+        <img [src]="foto.data" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
